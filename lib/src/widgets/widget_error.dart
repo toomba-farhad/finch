@@ -375,7 +375,7 @@ class ErrorWidget implements FinchStringWidget {
                                                 'title':
                                                     'Report to Finch Developers',
                                                 'href':
-                                                    'https://github.com/uproid/finch/issues'
+                                                    'https://github.com/uproid/finch/issues/new?assignees=&labels=bug&template=bug_report.md&title=$statusCode%20Error&body=```\n$stackItem\n```',
                                               },
                                               children: [$Text('🐛')],
                                             )
