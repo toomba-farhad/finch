@@ -1,4 +1,39 @@
 
+## 1.3.2
+- [#58](https://github.com/uproid/finch/issues/58) Fixes #58: Resolved issues in the migrate -i and migrate -r processes. The migration process will now stop if a MySQL error occurs.
+- fixing issue for examples
+
+## 1.3.1
+- [#54](https://github.com/uproid/finch/issues/54) Fixed a bug in the route caching functionality where responses were not being properly cached and retrieved based
+
+## 1.3.0
+- Added **Model Context Protocol (MCP) Server** support for building AI-powered applications [#49](https://github.com/uproid/finch/issues/49)
+  - Full MCP 2.0 specification implementation with schema handler system
+  - Automatic JSON serialization/deserialization using factory pattern
+  - Built-in support for tools, resources, and prompts
+  - Complete calculator example demonstrating MCP protocol flow
+  - McpServerController for handling MCP requests and responses
+- Updated dependencies to their latest versions for improved performance and security
+- Improved documentation to include details about the new MCP Server features and how to use them in Finch applications
+- Added new examples demonstrating the usage of the MCP Server in Finch applications
+
+## 1.2.2
+- Fixes [#50](https://github.com/uproid/finch/issues/50). The conflict between watchers in the serve environment has been resolved.
+
+## 1.2.1
+- Fixed bugs in route caching functionality to ensure proper caching and retrieval of routes based on the specified parameters and cache source. [#46](https://github.com/uproid/finch/issues/46)
+- Adding language parameter to cache function to specify the language for which the route should be cached, allowing for better support of multilingual applications. [#47](https://github.com/uproid/finch/issues/47)
+
+## 1.2.0
+- Added route caching functionality to improve performance of frequently accessed routes. This includes in-memory caching and file-based caching options, with configurable cache duration and parameters.
+- Updated dependencies to their latest versions to ensure compatibility and performance improvements.
+- Improved documentation to include details about the new caching features and how to use them.
+- Improved the example section to demonstrate the usage of route caching in Finch applications.
+
+## 1.1.4
+- Fixes bug of gettting template list in `finch templates` command in Finch CLI [#43](https://github.com/uproid/finch/issues/43)
+- Updated documentations
+
 ## 1.1.3
 - Added new command to create migration files for mysql and sqlite databases in Finch CLI
     ```bash
@@ -13,7 +48,7 @@
 - Fixed bug of cookies
 - Improved the cookie options
 - Updated dependencies
-- Added `finch templates` command to show the list of available templates in GitHub #40
+- Added `finch templates` command to show the list of available templates in GitHub [#40](https://github.com/uproid/finch/issues/40)
 
 ## 1.1.2
 - Adding -template option to Finch CLI to create new projects with different templates

@@ -40,6 +40,7 @@ Finch comes packed with essential tools to streamline your development process. 
 - Intuitive and flexible routing system with support for nested routes, parameters, and middleware.
 - Method-based routing (GET, POST, PUT, DELETE, etc.) with easy path matching.
 - Extra path support for API versioning and multiple endpoints.
+- **Route Cache System**: Easily cache HTTP responses in memory or on the file system for improved performance.
 
 ###  Internationalization (i18n)
 - Built-in support for multiple languages with easy translation management.
@@ -80,6 +81,11 @@ Finch comes packed with essential tools to streamline your development process. 
 - Efficient handling of static assets like CSS, JS, and images.
 - Automatic asset compilation and serving.
 - Support for public directories and custom paths.
+
+### 🔌 Model Context Protocol (MCP) Server
+- Expose AI-friendly endpoints following the Model Context Protocol standard.
+- Automated tool discovery and resource management for language models.
+- Seamless integration with AI agents and assistants for intelligent automation.
 
 ### 🎯 Dart Native Performance
 - Leverages Dart's speed and efficiency for high-performance applications.

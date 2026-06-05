@@ -16,6 +16,7 @@ import 'route/web_route.dart';
 import 'package:finch/finch_capp.dart';
 
 FinchConfigs configs = FinchConfigs(
+  pathCache: pathTo(env['PATH_CACHE'] ?? './cache_routes'),
   jinjaMapTemplate: mapTemplates,
   widgetsPath: pathTo(env['WIDGETS_PATH'] ?? "./lib/widgets"),
   widgetsType: env['WIDGETS_TYPE'] ?? 'j2.html',
@@ -36,10 +37,10 @@ FinchConfigs configs = FinchConfigs(
   mysqlConfig: FinchMysqlConfig(
     enable: true,
     host: env['MYSQL_HOST'] ?? 'localhost',
-    port: 3306,
-    user: 'example_user',
-    pass: 'example_password',
-    databaseName: 'example_db',
+    port: (env['MYSQL_PORT'] ?? '3306').toInt(def: 3306),
+    user: env['MYSQL_USER'] ?? 'example_user',
+    pass: env['MYSQL_PASSWORD'] ?? 'example_password',
+    databaseName: env['MYSQL_DATABASE'] ?? 'example_db',
   ),
 
   /// Enable local debugger
@@ -162,6 +163,9 @@ void main([List<String>? args]) async {
       delayFirstMoment: true,
     ).start(),
   );
+
+  // Clear all route cache (memory and file) every restart
+  RouteCache.clearAllCache();
 }
 
 void printDB() {
